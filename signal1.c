@@ -16,7 +16,11 @@ int main(int argc, char * argv[])
 {
   signal(SIGALRM,handler); //register handler to handle SIGALRM
   alarm(5); //Schedule a SIGALRM for 5 seconds
-  while(!working){} //busy wait for signal to be delivered
+
+  //busy wait for signal to be delivered
+  while(!working){
+    pause();
+  } 
   printf("Turing was right!\n");
   return 0; //never reached
 }

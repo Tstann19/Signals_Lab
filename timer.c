@@ -37,6 +37,7 @@ int main(int argc, char * argv[])
 
   alarm(5); //Schedule a SIGALRM for 5 seconds
   while(1){
+    pause();
     if (working){
       working = 0;
       printf("Turing was right!\n");
